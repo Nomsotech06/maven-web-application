@@ -26,7 +26,7 @@ pipeline{
          sh "mvn sonar:sonar"
          sh "echo CodeQualityAnalysis completed"          
       }
-
+      }
     }
     stage('4.UploadArtifacts'){
       steps{
@@ -36,6 +36,7 @@ pipeline{
           sh "echo Build and release completed"         
       }
     }
+   }
     stage('5.Deploy2UAT'){
       steps{
         sh "echo Deployment is ready for the client review"
